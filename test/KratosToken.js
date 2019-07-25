@@ -1,7 +1,7 @@
 const KratosToken = artifacts.require("./KratosToken.sol");
 
 contract('KratosToken', function (accounts) {
-    var tokenInstance;
+    let tokenInstance;
 
     it('initializes the contract with the correct value', function () {
         return KratosToken.deployed().then(function (instance) {
@@ -54,7 +54,6 @@ contract('KratosToken', function (accounts) {
             assert.equal(balance.toNumber(), 750000, 'deducts the amount from the sending accounts');
         });
     });
-
 
     it('approves tokens for delegated transfer', function () {
         return KratosToken.deployed().then(function (instance) {
