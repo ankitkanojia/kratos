@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e988704e-af7a-4eab-b96e-ace8256ade2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/KratosToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/KratosToken.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +70,9 @@
       <workItem from="1563944420249" duration="1556000" />
       <workItem from="1563946023456" duration="138000" />
       <workItem from="1563946170824" duration="9907000" />
-      <workItem from="1564025704905" duration="874000" />
+      <workItem from="1564025704905" duration="13708000" />
+      <workItem from="1564114469063" duration="4000" />
+      <workItem from="1564119642404" duration="1664000" />
     </task>
     <servers />
   </component>
