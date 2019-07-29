@@ -1,14 +1,14 @@
-var KratosToken = artifacts.require('./KratosToken.sol');
-var KratosTokenSale = artifacts.require('./KratosTokenSale.sol');
+const KratosToken = artifacts.require('./KratosToken.sol');
+const KratosTokenSale = artifacts.require('./KratosTokenSale.sol');
 
 contract('KratosTokenSale', function(accounts) {
-    var tokenInstance;
-    var tokenSaleInstance;
-    var admin = accounts[0];
-    var buyer = accounts[1];
-    var tokenPrice = 1000000000000000; // in wei
-    var tokensAvailable = 750000;
-    var numberOfTokens;
+    let tokenInstance;
+    let tokenSaleInstance;
+    const admin = accounts[0];
+    const buyer = accounts[1];
+    const tokenPrice = 1000000000000000; // in wei
+    const tokensAvailable = 750000;
+    let numberOfTokens;
 
     it('initializes the contract with the correct values', function() {
         return KratosTokenSale.deployed().then(function(instance) {
@@ -80,9 +80,10 @@ contract('KratosTokenSale', function(accounts) {
             return tokenInstance.balanceOf(admin);
         }).then(function(balance) {
             assert.equal(balance.toNumber(), 999990, 'returns all unsold Kratos tokens to admin');
+            return web3.eth.getBalance(tokenSaleInstance.address);
+        }).then(function (balance) {
             // Check that the contract has no balance
-            balance = web3.eth.getBalance(tokenSaleInstance.address)
-            assert.equal(balance.toNumber(), 0);
+            assert.equal(balance, 0);
         });
     });
 });
